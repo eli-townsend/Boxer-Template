@@ -1,0 +1,175 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boxie Boxer</title>
+    <link rel="stylesheet" href="css/foundation.min.css" />
+    <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="js/vendor/modernizr.min.js"></script>
+  </head>
+  <body>
+   
+       	<section id="header">
+        	<div class="summary">
+             <img src="img/logo.svg" alt="" width="250px" height="250px"><br /><br/>
+             <a href="#item1" class="secondary button radius">Take The Tour</a>
+            </div>
+        </section>
+          
+    <section class="menu_demo"> 
+        <div class="row">
+            <div class="menu large-3 small-12 columns">
+                <div class="row" id="snap-side-nav">
+                    <div class="large-12 columns"> <img src="img/logo.svg" alt="" width="100px" height="100px">
+                        <ul class="main-nav-list">
+                            <li><a href="#item1">Item 1</a></li>
+                            <li><a href="#item2">Item 2</a></li>
+                            <li><a href="#item3">Item 3</a></li>
+                            <li><a href="#item4">Item 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="social-bar">
+                    <div class="row">
+                        <div class="large-6 columns" style="background-color:#3b5998;">
+                            <a href="#" target="_blank" class="fa fa-facebook-official social-media"></a>
+                        </div>
+                        <div class="large-6 columns" style="background-color:#00aced">
+                            <a href="#" target="_blank" class="fa fa-twitter social-media"></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-6 columns" style="background-color:#bb0000">
+                            <a href="#" target="_blank" class="fa fa-youtube-play social-media"></a>
+                        </div>
+                        <div class="large-6 columns" style="background-color:#007bb6">
+                            <a href="#" target="_blank" class="fa fa-linkedin social-media"></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-6 columns" style="background-color:#dd4b39;">
+                            <a href="#" target="_blank" class="fa fa-google-plus social-media"></a>
+                        </div>
+                        <div class="large-6 columns" style="background-color:#00CC99">
+                            <a href="#" target="_blank" class="fa fa-envelope social-media"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="panels large-9 small-12 columns">
+                    <section id="item1">
+                        <div class="row">
+                            <div class="large-6 small-12 columns"> </div>
+                        </div>
+                    </section>
+                    <section id="item2">
+                        <div class="row">
+                            <div class="large-12 small-12 columns"> </div>
+                        </div>
+                    </section>
+                    <section id="item3">
+                        <div class="row">
+                            <div class="large-12 small-12 columns"> </div>
+                        </div>
+                    </section>
+                    <section id="item4">
+                        <div class="row">
+                            <div class="large-12 small-12 columns"> </div>
+                        </div>
+                    </section>
+                </div>
+        </div>
+    </section>
+	
+ 
+
+	<script src="js/vendor/jquery.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/vendor/jquery.panelSnap.js"></script>
+     <script>
+
+      jQuery(function($) {
+
+        // Basic demo
+        $('body').panelSnap();
+
+        // Menu demo
+        $('.menu_demo .panels').panelSnap({
+          $menu: $('.menu_demo .menu')
+        });
+
+        // Keyboard demo
+        $('.keyboard_demo .panels').panelSnap({
+          keyboardNavigation: {
+            enabled: true,
+            nextPanelKey: 39,
+            previousPanelKey: 37,
+            wrapAround: false
+          }
+        });
+
+        // Callback demo
+        $('.callback_demo .panels').panelSnap({
+          onSnapStart: function($target) {
+
+            log('callback', 'onSnapStart', $target);
+
+          },
+          onSnapFinish: function($target) {
+
+            log('callback', 'onSnapFinish', $target);
+
+          },
+          onActivate: function($target) {
+
+            log('callback', 'onActivate', $target);
+
+          }
+        });
+
+        // Event demo
+        $('.event_demo .panels').on('panelsnap:start', event_log);
+        $('.event_demo .panels').on('panelsnap:finish', event_log);
+        $('.event_demo .panels').on('panelsnap:activate', event_log);
+
+        $('.event_demo .panels').panelSnap();
+
+        function event_log(e, $target) {
+
+          log('event', e.type, $target);
+
+        }
+
+        // Shared log function
+        function log(type, action, $target) {
+
+          var text = '<p>' + action + ':<br>' + $target.find('h1').text() + '</p>';
+          $('.' + type + '_demo .log h2').after(text);
+
+        }
+
+      });
+
+    </script>
+    <script>
+	$(window).scroll(function() {
+		$('#slideImage').each(function(){
+		var imagePos = $(this).offset().top;
+
+		var topOfWindow = $(window).scrollTop();
+			if (imagePos < topOfWindow+400) {
+				$(this).addClass("slideRight");
+			}
+		});
+	});
+	
+	</script>
+  
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,357 @@
+      * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    width:100%;
+      }
+
+      body {
+        overflow: auto;
+      }
+
+      section {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+		text-align:center;
+      }
+	  
+	  section > *{
+		padding-top:10%;
+	  }
+
+section h1{
+    margin: 0 auto;
+}
+		
+		#header:after {
+			content: '';
+			display: block;
+			position: absolute;
+			min-height: 100%;
+			min-width: 100%;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background:url(../img/splash.jpg) repeat center center;
+		}
+		
+		#header{
+			position: relative;
+    		display: table;	
+			height: 100%;
+			width:100%;
+			text-align: center;
+			padding-top:0; 
+		}
+		
+		h1{
+			text-align:left;
+            padding-bottom:50px;
+            padding-left: 50px;
+		}
+		
+		label {
+		  cursor:default;
+		  font-weight: bold;
+		  font-size: 1em;
+		  margin-bottom: 0.5em;
+		 }
+		
+		a{
+			color:#000;	
+		}
+		
+		a:hover{
+			color:#f5f7f7;	
+		}
+.main-nav-list{
+    list-style: none;
+    margin-left: 0;
+}
+		button, .button {
+		  border-style: solid;
+		  border-width: 1px;
+		  cursor: pointer;
+		  font-family: inherit;
+		  font-weight: bold;
+		  line-height: 1;
+		  margin: 0 0 1.25em;
+		  position: relative;
+		  text-decoration: none;
+		  text-align: center;
+		  display: inline-block;
+		  padding-top: 0.75em;
+		  padding-right: 1.5em;
+		  padding-bottom: 0.8125em;
+		  padding-left: 1.5em;
+		  font-size: 1em;
+		  background-color:transparent;
+		  border-color: #fff;
+		  color: white; }
+		  button:hover, button:focus, .button:hover, .button:focus {
+			background-color:transparent;
+			color: white;
+			border-color: #f1553c; }
+		button.secondary, .button.secondary {
+		background-color:#f1553c;
+		border-color: white;
+		color: white; }
+		button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+		  background-color:#4597a4; 
+		  color:#fff;}	
+		
+		.summary{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			vertical-align: middle;
+			display:table-cell;
+			z-index:50;
+		}
+		
+	    #item1{
+			background:#4597a4;
+			position: relative;
+			vertical-align: middle;
+		}
+		
+		 #item2{
+			position: relative;
+			vertical-align: middle;
+			background:#193238;
+             color: #FFFFFF;
+		}
+#item2 h1{
+    color: #FFFFFF;
+}
+		 #item3{
+			position: relative;
+			vertical-align: middle;
+			background:#f5f7f7;
+		}
+		
+		#item4{
+			height:100%;
+			position: relative;
+			vertical-align: middle;
+			background:#f1553c;
+		}
+ 	.panels,
+      pre {
+        position: absolute;
+		left:19.1%;
+		top:0;
+		width:80.9%;
+		height:100%;
+        overflow:auto;
+      }
+
+      .log,
+      .menu {
+		 position: absolute;
+		top:0;
+        right: auto;
+        left: 0;
+        width: 20%;
+		height:100%;
+		margin:0;
+		padding:0;
+      }
+
+#snap-side-nav{
+    padding-top: 10px;
+    width: 20%;
+    float: left;
+    text-align: center;
+    max-height: 100%;
+}
+#side-logo{
+    width: 200px;
+    height: 100px;
+    max-height: 250px;
+    margin: 0 auto;
+}
+#panel-side{
+    width: 80%;
+    float: left;
+    padding-left: 1%;
+}
+ul.social-bar{
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+ul.social-bar li{
+    width: 50%;
+    float: left;
+}
+	   .menu a {
+        display: block;
+        width: 100%;
+        padding: .5em;
+        background:transparent;
+        margin: 0;
+        border-bottom:none;
+      }
+
+      .menu a:hover {
+        background:rgba(0,0,0,0.5);
+		color:#FFFFFF;
+        width: 100%;
+      }
+
+	  .menu a.fa-facebook-official.social-media{
+		background:transparent;  
+		color:#fff;
+		width:100%;
+        background: #3B5998;
+        border: none;
+	  }
+	  
+	  .menu a.fa-twitter.social-media{
+		background:transparent; 
+		color:#fff; 
+		width:100%;
+          background: #00ACED;
+		 border: none;
+	  }
+	  
+	  .menu a.fa-youtube-play.social-media{
+		background:transparent;  
+		color:#fff;
+		width:100%;
+          background: #BB0000;
+		 border: none;
+	  }
+	  
+	  .menu a.fa-linkedin.social-media{
+		background:transparent;  
+		color:#fff;
+		width:100%;
+          background: #007BB6;
+		 border: none;
+	  }
+	  
+	  .menu a.fa-google-plus.social-media{
+		background:transparent;  
+		color:#fff;
+		width:100%;
+          background: #DD4B39;
+		 border: none;
+	  }
+	  
+	  .menu a.fa-envelope.social-media{
+		background:transparent;  
+		color:#fff;
+		width:100%;
+          background: #00CC99;
+		 border: none;
+	  }
+.menu a.fa{
+		font-size:3.5em;
+}
+.menu a.fa:hover{
+    color: #FFFFFF;
+    background: #333;
+}
+
+.copyright{
+    padding-bottom: -15px;
+}
+
+
+	section .panels > section{
+		padding-right:5%;
+		padding-left:5%;	
+	}
+	
+	section .panels > section > footer{
+		padding:0;	
+	}
+	
+	::-webkit-scrollbar { 
+    display: none; 
+}     
+
+
+@media only screen and (max-width: 1000px) {
+    #header{
+			position: static;
+    		display: table;	
+			height: 100%;
+			width:100%;
+			text-align: center;
+			padding-top:0; 
+		}
+
+    section {
+        position: relative;
+        overflow: scroll;
+        width: 100%;
+        height: 100%;
+		text-align:center;
+        margin:0;
+		padding:0;
+      }
+
+.panels,
+      pre {
+        position: static;
+		width:100%;
+		height:100%;
+        overflow:auto;
+    margin:0;
+		padding:0;
+      }
+
+      .log,
+      .menu {
+		 position: static;
+        width: 100%;
+		height:100%;
+		margin:0;
+		padding:0;
+      }
+    #snap-side-nav{
+    padding-top: 10px;
+    width: 100%;
+    float: none;
+    text-align: center;
+    max-height: 100%;
+}
+#side-logo{
+    width: 200px;
+    height: 100px;
+    max-height: 250px;
+    margin: 0 auto;
+}
+#panel-side{
+    width: 100%;
+    float: none;
+    padding-left: 0;
+}
+    ul.social-bar{
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+ul.social-bar li{
+    width: 16.666666667%;
+    float: left;
+}
+.menu a.fa{
+    font-size:1.5em;
+}	 
+}
